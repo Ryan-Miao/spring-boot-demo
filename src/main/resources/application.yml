@@ -1,0 +1,8 @@
+
+#指定环境配置文件
+spring:
+  profiles:
+    active: dev
+  # 修改默认静态路径，默认为/**
+  mvc:
+    static-path-pattern: /static/**
