@@ -3,6 +3,6 @@
 spring:
   profiles:
     active: dev
-  # 修改默认静态路径，默认为/**
+  # 修改默认静态路径，默认为/**，当配置hello.config.ServletContextConfig后此处配置失效
   mvc:
     static-path-pattern: /static/**
