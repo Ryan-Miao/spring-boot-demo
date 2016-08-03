@@ -19,8 +19,10 @@ spring-boot demo
 4. 静态文件还可以放在src/main/resources/static下，url访问方式为:   
 > /static/js/jquery/jquery-1.12.0.min.js   or  /static/hello.html   
 5. 模板文件根据后缀来判断模板类型。html为thymeleaf，ftl为freemarker，jsp为jsp。
-模板文件放在src/main/resources/templates下，在controller中render方式为：    
->  return "user";  //表示render user.ftl   
+模板文件放在src/main/resources/templates下，在controller中render方式为:    
+> return "user";  //表示render user.ftl    
+
+
 
    
    
