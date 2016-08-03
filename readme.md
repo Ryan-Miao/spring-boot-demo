@@ -26,6 +26,10 @@ spring-boot demo
 6. 配文件为:    
 >  src/main/resources/application.yml application-dev.yml   
 
+7. 配置拦截器的位置：
+> src/main/java/hello/interceptor/xxxx   and  src/main/java/config/ServletContextConfig
+
+
 
 
 
