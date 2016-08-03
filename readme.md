@@ -22,3 +22,6 @@ spring-boot demo
 模板文件放在src/main/resources/templates下，在controller中render方式为：    
 >  return "user";  //表示render user.ftl   
 
+   
+   
+
