@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
 @SpringBootApplication
-public class SampleController {
+public class Application {
 
     @RequestMapping("/")
     public String home() {
@@ -16,6 +16,6 @@ public class SampleController {
     }
 
     public static void main(String[] args) throws Exception {
-        SpringApplication.run(SampleController.class, args);
+        SpringApplication.run(Application.class, args);
     }
 }

@@ -1,16 +1,15 @@
-package hello;
+package hello.web;
 
 import hello.entity.User;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.Errors;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -37,6 +36,22 @@ public class HelloController {
             map.put("user",user);
         }
 
+        return map;
+    }
+
+    @RequestMapping(value = "/map.json", method = {RequestMethod.GET,RequestMethod.POST})
+    @ResponseBody
+    public Map map(){
+        Map map = new HashMap();
+        map.put("name","Ryan");
+        map.put("sex","man");
+        map.put("age",18);
+        List list = new ArrayList();
+        list.add("red");
+        list.add("black");
+        list.add("blue");
+        list.add("yellow");
+        map.put("colors",list);
         return map;
     }
 }
