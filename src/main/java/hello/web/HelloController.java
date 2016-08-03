@@ -39,6 +39,20 @@ public class HelloController {
         return map;
     }
 
+    @RequestMapping("/user")
+    public String user(@Valid @ModelAttribute("user")User user, Errors errors, Model model){
+
+        if (errors.hasErrors()){
+            model.addAttribute("error",errors.getAllErrors());
+        }else{
+            model.addAttribute("user",user);
+        }
+
+        return "user";
+    }
+
+
+
     @RequestMapping(value = "/map.json", method = {RequestMethod.GET,RequestMethod.POST})
     @ResponseBody
     public Map map(){
