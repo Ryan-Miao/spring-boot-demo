@@ -10,6 +10,24 @@ spring-boot demo
 - profile
 - freemarker
 
+# how to run
+cmd到当前目录，然后运行：
+> mvn spring-boot:run   
+
+运行成功后浏览器访问：
+> http://localhost:8080/
+
+debug：
+```
+mvn spring-boot:run -Drun.jvmArguments="-Xdebug -Xrunjdwp:transport=dt_socket,server=y,suspend=y,address=5005"
+而后，在idea中选择  Run-> Edit Configuration -> + -> remote -> apply
+```
+
+其他运行方式：直接运行：
+> hello.Application.main方法即可，debug同样可以。
+
+
+
 # about setting
 1. java文件位于src/main/java下。
 2. 配置文件位于src/main/resources下。
