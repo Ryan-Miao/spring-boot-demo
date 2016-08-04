@@ -1,8 +1,34 @@
 
 #指定环境配置文件
-spring:
-  profiles:
-    active: dev
-  # 修改默认静态路径，默认为/**，当配置hello.config.ServletContextConfig后此处配置失效
-  mvc:
-    static-path-pattern: /static/**
+spring.profiles.active: dev
+
+
+########################################################
+###THYMELEAF (ThymeleafAutoConfiguration)
+########################################################
+spring.thymeleaf.prefix: classpath:/webapp/templates/
+#spring.thymeleaf.suffix: .html
+#spring.thymeleaf.mode: HTML5
+#spring.thymeleaf.encoding: UTF-8
+# ;charset: <encoding> is added
+#spring.thymeleaf.content-type: text/html
+# set to false for hot refresh
+spring.thymeleaf.cache: false
+
+########################################################
+###FREEMARKER (FreeMarkerAutoConfiguration)
+########################################################
+spring.freemarker.allow-request-override: false
+spring.freemarker.cache: true
+spring.freemarker.check-template-location: true
+spring.freemarker.charset: UTF-8
+spring.freemarker.content-type: text/html
+spring.freemarker.expose-request-attributes: false
+spring.freemarker.expose-session-attributes: false
+spring.freemarker.expose-spring-macro-helpers: false
+#spring.freemarker.prefix:
+#spring.freemarker.request-context-attribute:
+#spring.freemarker.settings.*:
+#spring.freemarker.suffix: .ftl
+spring.freemarker.template-loader-path: classpath:/webapp/templates
+#spring.freemarker.view-names: #whitelistofviewnamesthatcanberesolved
