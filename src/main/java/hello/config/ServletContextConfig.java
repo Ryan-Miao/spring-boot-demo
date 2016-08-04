@@ -40,9 +40,9 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurationSupp
 @ComponentScan(basePackageClasses = Application.class, useDefaultFilters = true)
 public class ServletContextConfig extends WebMvcConfigurationSupport {
 
-    static final private String FAVICON_URL = "/favicon.ico";
-    static final private String PROPERTY_APP_ENV = "application.environment";
-    static final private String PROPERTY_DEFAULT_ENV = "dev";
+static final private String FAVICON_URL = "/favicon.ico";
+static final private String PROPERTY_APP_ENV = "application.environment";
+static final private String PROPERTY_DEFAULT_ENV = "dev";
 
 
 
@@ -53,7 +53,7 @@ public class ServletContextConfig extends WebMvcConfigurationSupport {
     @Override
     public void addResourceHandlers(ResourceHandlerRegistry registry) {
         registry.addResourceHandler("/").addResourceLocations("/**");
-        registry.addResourceHandler("/static/**").addResourceLocations("classpath:/static/");
+        registry.addResourceHandler("/webapp/static/**").addResourceLocations("classpath:/webapp/static/");
     }
 
 
