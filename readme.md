@@ -24,7 +24,7 @@ mvn spring-boot:run -Drun.jvmArguments="-Xdebug -Xrunjdwp:transport=dt_socket,se
 ```
 
 其他运行方式：直接运行：
-> hello.Application.main方法即可，debug同样可以。
+> com.demo.config.ApplicationContextConfig.main方法即可，debug同样可以。
 
 
 

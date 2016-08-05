@@ -1,4 +1,4 @@
-package hello.entity;
+package com.demo.domain.entity;
 
 import org.hibernate.validator.constraints.Length;
 

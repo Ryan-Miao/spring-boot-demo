@@ -1,6 +1,6 @@
-package hello.web;
+package com.demo.web;
 
-import hello.entity.User;
+import com.demo.domain.entity.User;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.Errors;
