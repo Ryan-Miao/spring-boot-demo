@@ -22,10 +22,10 @@
  * THE SOFTWARE.
  */
 
-package hello.config;
+package com.demo.config;
 
-import hello.Application;
-import hello.interceptor.LoginInterceptor;
+import com.demo.Application;
+import com.demo.interceptor.LoginInterceptor;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.DefaultServletHandlerConfigurer;
