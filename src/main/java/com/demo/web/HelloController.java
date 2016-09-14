@@ -1,6 +1,7 @@
 package com.demo.web;
 
 import com.demo.domain.entity.User;
+import org.apache.commons.lang3.StringEscapeUtils;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.Errors;
@@ -40,12 +41,16 @@ public class HelloController {
     }
 
     @RequestMapping("/user")
-    public String user(@Valid @ModelAttribute("user")User user, Errors errors, Model model){
-
+    public String user(@Valid @ModelAttribute("user")User user, Errors errors, Model model, String xss,
+                       @RequestParam(defaultValue = "true") boolean injection){
+        if (injection) {
+            xss = StringEscapeUtils.escapeHtml4(xss);
+        }
+        model.addAttribute("xss", xss);
         if (errors.hasErrors()){
             model.addAttribute("error",errors.getAllErrors());
         }else{
-            model.addAttribute("user",user);
+//            model.addAttribute("user",user);
         }
 
         return "user";
