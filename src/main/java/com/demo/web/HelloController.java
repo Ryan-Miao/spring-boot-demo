@@ -1,7 +1,10 @@
 package com.demo.web;
 
+import com.demo.domain.entity.Config;
+import com.demo.domain.entity.Language;
 import com.demo.domain.entity.User;
 import org.apache.commons.lang3.StringEscapeUtils;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.Errors;
@@ -20,6 +23,12 @@ import java.util.Map;
 @Controller
 public class HelloController {
 
+    @Autowired
+    Config config;
+
+    @Autowired
+    Language language;
+
     @RequestMapping("/index")
     public String hello(Model model, @RequestParam(defaultValue = "Ryan") String name){
         model.addAttribute("name",name);
@@ -37,6 +46,8 @@ public class HelloController {
             map.put("user",user);
         }
 
+        map.put("config", config);
+        map.put("language", language);
         return map;
     }
 

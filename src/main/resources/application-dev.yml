@@ -2,5 +2,5 @@
 security:
   user:
     name: admin
-    password: test
+    password: dev
 

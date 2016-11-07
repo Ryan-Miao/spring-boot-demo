@@ -1,6 +1,14 @@
 
 #指定环境配置文件
-spring.profiles.active: dev
+spring:
+  profiles:
+    active: dev
+#用户名 密码配置
+---
+security:
+  user:
+    name: admin
+    password: admin
 
 
 ########################################################
@@ -32,3 +40,54 @@ spring.freemarker.expose-spring-macro-helpers: false
 #spring.freemarker.suffix: .ftl
 spring.freemarker.template-loader-path: classpath:/webapp/templates
 #spring.freemarker.view-names: #whitelistofviewnamesthatcanberesolved
+
+
+
+---
+my:
+      desc: test multi
+      servers:
+           - dev.bar.com
+           - foo.bar.com
+           - 苗
+           - 测试
+      properties:
+          location: classpath
+          files:
+              - application.yml
+              - application.properties
+              - application-default.properties
+      langIDs:
+        - id_1033
+        - id_2057
+
+---
+language:
+  ids:
+    - id_1033: English US
+    - id_2057: English UK
+    - id_3082: Español
+    - id_1040: Italiano
+    - id_1036: Français
+    - id_1031: Deutsch
+    - id_1041: 日本語
+    - id_2052: 中文
+    - id_1028: 中文 (台灣)
+    - id_1043: Nederlands
+    - id_1053: Svenska
+    - id_1044: norsk, bokmål (Norge)
+    - id_1055: Türkçe
+    - id_2070: Português (Portugal)
+    - id_1046: Português (Brasileiro)
+    - id_1030: Dansk
+    - id_1042: 한국어
+    - id_1045: polski
+    - id_1032: Ελληνικά
+    - id_1049: Русский
+    - id_1066: Tiếng Việt
+    - id_1029: Čeština
+    - id_1054: ภาษาไทย
+    - id_1038: magyar
+    - id_1035: suomi
+    - id_1050: hrvatski
+
