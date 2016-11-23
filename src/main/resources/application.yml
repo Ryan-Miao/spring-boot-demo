@@ -3,8 +3,8 @@
 spring:
   profiles:
     active: dev
-#用户名 密码配置
 ---
+#用户名 密码配置
 security:
   user:
     name: admin
