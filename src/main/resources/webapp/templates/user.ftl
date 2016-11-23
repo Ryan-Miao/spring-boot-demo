@@ -5,6 +5,8 @@
     <title>User</title>
 </head>
 <body>
+This is xss: ${xss!'null'}
+<hr/>
 This is a freemarker template. You can choose any template you like.
 <hr/>
 Hi, My name is  ${user.name}! I'm ${user.age} yeas old, and I'm a ${user.sex}.

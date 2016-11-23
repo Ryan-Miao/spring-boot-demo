@@ -1,6 +1,6 @@
 #用户名 密码配置
-#security:
-#  user:
-#    name: admin
-#    password: test
+security:
+  user:
+    name: admin
+    password: dev
 
